@@ -4,7 +4,21 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #24252A;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(48, 50, 53);
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 p, li, a, button {
@@ -16,21 +30,25 @@ p, li, a, button {
   text-decoration: none;
 }
 
-header {
+nav {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: end;
   align-items: center;
-  padding: 30px 10%;
+  padding: 2vh 12vh;
   background-color: rgb(20, 21, 24);
+  transition: .2s;
 }
 
-#headerName {
+#navName {
   font-size: 24px;
   margin-right: auto;
 }
 
 #nav_links {
   list-style: none;
+  background-color: rgb(20, 21, 24);
 }
 
 #nav__links li {
@@ -61,4 +79,8 @@ button {
 
 button:hover {
   background-color: rgba(0, 136, 169, 0.8);
+}
+
+section {
+  padding: 5vh 10vh
 }
